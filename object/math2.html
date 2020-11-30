@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //while문과 Math.random()을 이용해 두 개의 주사위를 던진다고 할 때
+      //(첫번째 주사위값, 두번째 주사위값) ==5 이라면 주사위를 멈춘다
+      var sum = 0;
+      while (true) {
+        //true -> 루프를 멈추는 코드가 필요
+        var num1 = Math.floor(Math.random() * 6) + 1;
+        var num2 = Math.floor(Math.random() * 6) + 1;
+        document.write("(" + num1 + "," + num2 + ")" + "<br>");
+        sum = num1 + num2;
+
+        if (sum == 5) {
+          break; //루프를 멈추는 코드
+        }
+      }
+    </script>
+  </body>
+</html>

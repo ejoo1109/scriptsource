@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //이번 주 로또 번호
+      //로또 번호 6개를 추출하여 배열에 담은 후 출력하기 1~45 => []
+      //while length>6 이면 멈춤
+      //빈 배열 생성
+      //var lottoArray = [];
+      var lottoArray = new Array();
+      while (true) {
+        //로또 번호 추출
+        var lotto = Math.floor(Math.random() * 46) + 1;
+        //배열에 담기
+        lottoArray.push(lotto);
+
+        //로또번호는 6개만 추출
+        if (lottoArray.length > 5) {
+          break;
+        }
+      }
+      document.write("이번 주 로또 번호 : ", lottoArray);
+    </script>
+  </body>
+</html>

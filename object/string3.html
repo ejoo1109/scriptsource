@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //이메일을 입력받아 중간 @ 들어있는지 확인하기
+      //들어있지 않다면 alert(이메일 다시 입력)
+      //다시 이메일을 입력받기 = function
+      function emailCheck() {
+        var email = prompt("이메일을 입력하세요");
+
+        if (email.indexOf("@") == -1) {
+          alert("이메일 다시 입력");
+          emailCheck();
+        } else {
+          document.write(email);
+        }
+      }
+      emailCheck();
+    </script>
+  </body>
+</html>
