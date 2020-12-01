@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="button" value="이전으로" onclick="goBack()" />
+    </div>
+    <div>
+      <input type="button" value="다음으로" onclick="goForward()" />
+    </div>
+    <div>
+      <input type="button" value="지정된만큼이동" onclick="move()" />
+    </div>
+    <script>
+      function goBack() {
+        history.back();
+      }
+      function goForward() {
+        history.forward();
+      }
+      function move() {
+        history.go(-2); //-값은 이전을 의미하고 + 값은 다음을 의미한다
+      }
+    </script>
+  </body>
+</html>
