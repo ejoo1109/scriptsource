@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--원본 이미지-->
+    <img src="dog.jpg" alt="강아지" />
+    <button type="button" onclick="changeImg()">클릭</button>
+    <script>
+      function changeImg() {
+        //이미지 변경
+        let img = document.querySelector("img");
+        img.src = "images.jpg";
+      }
+    </script>
+  </body>
+</html>

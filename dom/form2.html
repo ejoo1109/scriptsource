@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="num1" size="10" />
+        <select name="op" id="">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" name="num2" size="10" />
+        <input type="button" value="계산" onclick="calc()" />
+      </div>
+      <div id="result"></div>
+    </form>
+    <script>
+      function calc() {
+        //num1, op,num2의 값을 가져와서 계산한 후 결과 출력(result 영역)하기
+        var num1 = parseInt(document.querySelector("[name='num1']").value);
+        var num2 = parseInt(document.querySelector("[name='num2']").value);
+        var op = document.querySelector("[name='op']").value;
+        //결과 담을 변수선어
+        var result = 0;
+
+        switch (op) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          case "/":
+            result = num1 / num2;
+            break;
+        }
+        //결과를 보여줄 영역 가져오기
+        document.querySelector("#result").innerHTML =
+          "<h3> 결과값 : " + result + "<h3>";
+      }
+    </script>
+  </body>
+</html>

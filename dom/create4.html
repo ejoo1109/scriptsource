@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .callout {
+        border: solid 1px #ff0080;
+        margin: 2px 4px;
+        padding: 2px 6px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -21,4 +28,19 @@
       <p>A single HTML element can have multiple classes.</p>
     </div>
   </body>
+  <script>
+    //두 개의 p 태그를 생성
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+
+    //생성된 p태그 안에 문자 삽입
+    p1.innerText = "I was created dynamically";
+    p2.innerText = "I was also created dynamically!";
+
+    const content = document.getElementById("content");
+    let content_firstChild = content.firstElementChild;
+    //insertBefore(삽입할 요소, 삽입할 위치)
+    content.insertBefore(p1, content_firstChild);
+    content.appendChild(p2);
+  </script>
 </html>
