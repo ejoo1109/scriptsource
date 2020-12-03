@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>Apple</li>
+        <li>Bag</li>
+        <li>Cat</li>
+        <li>Dog</li>
+        <li>Elephant</li>
+      </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("body>*").css("color", "red"); //body안에 있는 자식 전체요소
+      });
+    </script>
+  </body>
+</html>
