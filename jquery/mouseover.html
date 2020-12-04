@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .out {
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="para1">이것은 헤드 태그입니다.</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <p>이것은 두번째 문단입니다.</p>
+    <button>클릭</button>
+    <p class="out">마우스를 여기로 움직여 주세요</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //버튼을 클릭하면 이벤트-익명함수로 구현
+        //$("button").click(function () {
+        //$("*").hide(); //모든요소 숨기기 .show모든요소 나오게하기
+        //});
+        //마우스를 올리면 경고창 나오게하기
+        //$(".out").mouseover(function () {
+        alert("마우스를 움직였습니다");
+        //on방식 - 여러개의 효과를 줄때
+        $("button").on("click focus", function () {
+          $("*").hide();
+        });
+        $(".out").on("mouseover", function () {
+          alert("마우스를 움직였습니다");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1">Header 1</h1>
+    <h1 id="header2">Header 2</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //Header1 클릭하면 해당 요소의 텍스트 값을 가져오기
+        $("#header1").click(function () {
+          // innerText => text(), innerHTML=>html()
+          alert($("#header1").text());
+        });
+
+        //Header2 클릭하면 해당 요소의 텍스트 값을 변경하기
+        $("#header2").click(function () {
+          //text("변경할내용"); 또는 html("<b>변경할 내용</b>")
+          //$(this).text("text() 메소드");
+          $(this).html("<i>text() 메소드</i>");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>The Light Bulb</h2>
+    <button type="button" id="on">Turn on the light</button>
+    <img src="../dom/pic_bulboff.gif" alt="" />
+    <button type="button" id="off">Turn off the light</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //img.src=""; or img.setAttribute("src","");
+        //태그 속성값을 src 변경=>attr("속성명","변경할 값")사용
+        var img = $("img");
+        $("#on").click(function () {
+          img.attr("src", "../dom/pic_bulbon.gif");
+        });
+        $("#off").click(function () {
+          img.attr("src", "../dom/pic_bulboff.gif");
+        });
+      });
+    </script>
+  </body>
+</html>

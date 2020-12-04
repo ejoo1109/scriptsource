@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">이름</label>
+      <input type="text" />
+    </div>
+    <div>
+      <label for="">이메일</label>
+      <input type="email" />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //focus:(taq키를 눌르면 깜빡거리는것)를 가지게 되면 배경색 변경
+        $("input").focus(function () {
+          $(this).css("background-color", "#ccc");
+        });
+        //focus를 벗어나면 원래의 배경색으로 되돌리기
+        //blur:내용을 입력안해도 실행됨
+        $("input").blur(function () {
+          $(this).css("background-color", "#fff");
+        });
+      });
+    </script>
+  </body>
+</html>

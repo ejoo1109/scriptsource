@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="hide1">If you couble-click on me. I will disappear</p>
+    <p class="hide2">click me away!</p>
+    <p class="hide3">click me too!</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //더블클릭하면 숨김
+        $(".hide1").dblclick(function () {
+          $(this).hide();
+        });
+        //클릭하면 숨김
+        $(".hide2").click(function () {
+          $(this).hide();
+        });
+      });
+    </script>
+  </body>
+</html>
