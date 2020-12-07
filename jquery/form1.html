@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <label for="">아이디</label>
+        <input type="text" name="userid" />
+      </div>
+      <button type="button">전송</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //버튼이 클릭되면 이름과 아이디값을 가져온 후 alert()에 보여주기
+      $(function () {
+        $("button").click(function () {
+          var username = $("[name='username']").val();
+          var userid = $("[name='userid']").val();
+          console.log(username);
+          alert("이름 :" + username + "\n" + "아이디 :" + userid);
+        });
+      });
+    </script>
+  </body>
+</html>

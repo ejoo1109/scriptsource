@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="checkbox" name="fruit" value="사과" />사과
+        <input type="checkbox" name="fruit" value="바나나" />바나나
+        <input type="checkbox" name="fruit" value="포도" />포도
+        <input type="checkbox" name="fruit" value="딸기" />딸기
+      </div>
+      <button type="button">보내기</button>
+      <div id="result"></div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //checkebox 선택값 result영역에 보여주기
+      $(function () {
+        $("button").click(function () {
+          var chkfruit = "";
+          $(":checked").each(function () {
+            chkfruit += $(this).val();
+          });
+          $("#result").html("결과값 : " + chkfruit);
+        });
+      });
+    </script>
+  </body>
+</html>

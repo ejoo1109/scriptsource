@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="">전화번호</label>
+        <input type="text" name="usertel" id="usertel" />
+      </div>
+      <div>
+        <label for="">비밀번호</label>
+        <input type="text" name="userpwd" id="userpwd" />
+      </div>
+      <div>
+        <button type="button" id="read">내용읽기</button>
+        <button type="button" id="modify">내용수정</button>
+        <button type="button" id="delete">내용삭제</button>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //내용읽기 버튼이 클릭되면 form 의 action 속성을 변경한후 submit()하기
+        $("#read").click(function () {
+          $("form").attr("action", "form7.html");
+          //폼 안의 특정요소 제외하고 보내기
+          $("#userpwd").remove();
+          $("form").submit();
+        });
+        $("#modify").click(function () {
+          $("form").attr("action", "form6.html");
+          $("form").submit();
+        });
+        $("#delete").click(function () {
+          //폼 안의 요소 모두 제외하고 보내기
+          $("form").empty();
+          //새로운 요소 추가해서 보내기(태그모양으로 작성)
+          $("form").append("<input type='hidden' name='page' value='3'");
+          $("form").attr("action", "form5.html");
+          $("form").submit();
+        });
+      });
+    </script>
+  </body>
+</html>

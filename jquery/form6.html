@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="checkbox" name="fruit" value="사과" id="chk1" />사과
+        <input
+          type="checkbox"
+          name="fruit"
+          value="바나나"
+          id="chk2"
+          checked
+        />바나나
+        <input type="checkbox" name="fruit" value="포도" id="chk3" />포도
+        <input type="checkbox" name="fruit" value="딸기" id="chk4" />딸기
+      </div>
+      <div>
+        <select name="opt" id="opt">
+          <option value="사과">사과</option>
+          <option value="복숭아">복숭아</option>
+          <option value="메론" selected>메론</option>
+        </select>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //prop(): 선택한 폼 요소의 상태, 속성값을 가져오거나 설정할때 사용
+        console.log($("#chk1").prop("checked"));
+        console.log($("#chk2").prop("checked"));
+
+        //상태 속성값 설정하기
+        $("#chk1").prop("checked", true);
+
+        //chk2가 checked 값이 true라면 false로 변경
+        if ($("#chk2").prop("checked")) {
+          $("#chk2").prop("checked", false);
+        }
+        //selected인 값의 인덱스 가져오기
+        console.log($("#opt").prop("selectedIndex"));
+      });
+    </script>
+  </body>
+</html>
