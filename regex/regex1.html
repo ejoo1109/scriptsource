@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h4>정규 표현식과 일치하는 문자열 리턴 - exec</h4>
+      <p id="exec"></p>
+    </div>
+    <div>
+      <h4>
+        정규 표현식과 일치하는 문자열이 있으면 true, 없으면 false 리턴 -test
+      </h4>
+      <p id="test"></p>
+    </div>
+    <div>
+      <h4>정규 표현식과 일치하는 부분 리턴 -mathch</h4>
+      <p id="match"></p>
+    </div>
+    <div>
+      <h4>정규 표현식과 일치하는 위치 리턴 - search</h4>
+      <p id="search"></p>
+    </div>
+    <script>
+      //정규식(패턴) 생성 1.-new RegExp() 객체 이용해서 생성
+      // const reg = new RegExp("Ajax");
+
+      //정규식(패턴) 생성 2.-/패턴/
+      const reg = /Ajax/;
+
+      //원본 문자열
+      const str = "Javascript jQuery Ajax";
+
+      //영역 가져오기
+      document.getElementById("exec").innerText = reg.exec(str);
+      document.getElementById("test").innerText = reg.test(str);
+      document.getElementById("match").innerText = str.match(reg);
+      document.getElementById("search").innerText = str.search(reg);
+    </script>
+  </body>
+</html>
