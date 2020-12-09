@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        color: red;
+        margin-top: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text"" name="name" onfocus="inputClear()" />
+    <input type="button" value="보내기" onclick="nameCheck()" />
+    <p id="result"></p>
+    <script>
+      let result = document.querySelector("#result");
+      let name = document.querySelector("[name='name']");
+      function inputClear() {
+        name.select();
+        //포커스를 주면 하단에 나왔던 검증 메세지 없애기
+        result.style.display = "none"; //디스플레이 감추기
+      }
+      function nameCheck() {
+        //정규식 패턴 생성
+        let reg = /[가-힣]{2,4}/;
+        //사용자가 입력한 값 가져오기
+        if (!reg.test(name.value)) {
+          //패턴과 일치하지 않는다면 메세지 띄우기
+          result.style.display = "block";
+          result.innerHTML = "한글 이름을 입력해 주세요";
+        }
+      }
+    </script>
+  </body>
+</html>

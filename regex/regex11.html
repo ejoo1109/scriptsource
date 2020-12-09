@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input =
+        "Regex pros know the difference between <i>greedy</i> <i>lazy</i> matching.";
+      let reg = /<i>(.*?)<\/i>/g;
+      console.log(input.match(reg));
+      //replace -> 캡처링한걸 변경하고 싶을때
+      console.log(input.replace(reg, "<strong>$1<\/strong>"));
+    </script>
+  </body>
+</html>
