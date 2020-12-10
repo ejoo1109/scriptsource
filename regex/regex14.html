@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="name">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <input type="submit" value="전송" onclick="validate()" />
+      </div>
+    </form>
+    <script>
+      //버튼을 누르면 폼의 내용을 가져와서 확인하기
+      //사용자의 이름이 비어 있지 않고 2~4자리로 입력 되어있는지 확인하기
+      //나이가 입력되어 있고, 0~120까지의 숫자가 입력되어있는지 확인하기
+
+      function validate() {
+        //태그가 가지고 있는 기능 중지 (submit, a)
+        event.preventDefault();
+
+        //이름 가져오기
+        var name = document.getElementById("name");
+        //나이 가져오기
+        var age = document.getElementById("age");
+
+        if (name.value.length < 2 || name.value.length > 4) {
+          alert("이름을 확인해 주세요");
+          name.focus();
+          name.select();
+          return false;
+        }
+        //paseInt('') : 공백을 주는 경우 NaN 발생함
+        if (
+          isNaN(parseInt(age.value)) ||
+          parseInt(age.value) < 0 ||
+          parseInt(age.value) > 120
+        ) {
+          alert("나이를 확인해 주세요");
+          age.focus();
+          return false;
+        }
+        //서브밋을 막았으므로 수동으로 전송해줘야함
+        document.querySelector("form").submit();
+      }
+    </script>
+  </body>
+</html>
