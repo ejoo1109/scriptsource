@@ -62,9 +62,9 @@ function checkPass(password){
         }
     })//email
     $("#mobile").change(function(){
-        let mobliecheck = /^\d{2,3}\d{3,4}\d{3,4}$/;
+        let mobilecheck = /^\d{2,3}\d{3,4}\d{3,4}$/;
 
-        if(!mobliecheck.test($("#mobile").val())){
+        if(!mobilecheck.test($("#mobile").val())){
             alert("핸드폰 번호를 확인해 주세요");
             $("#mobile").select();
             return false;
