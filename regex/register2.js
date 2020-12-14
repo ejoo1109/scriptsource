@@ -1,6 +1,6 @@
 $(function(){
     $("#join").validate({
-        //규칙 정의
+        //규칙 정의-이름
     rules :{
         userid :{ //영문,숫자조합으로 6~12자리
             required : true,
